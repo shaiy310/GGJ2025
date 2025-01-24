@@ -9,4 +9,14 @@ namespace MyFiles.Scripts.Events
 			HorizontalMovement = horizontalMovement;
 		}
 	}
+
+    public class PushDownEvent
+    {
+        public bool IsPressed { get; private set; }
+
+        public PushDownEvent(bool isPressed)
+        {
+            IsPressed = isPressed;
+        }
+    }
 }
