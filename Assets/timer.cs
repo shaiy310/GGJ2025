@@ -1,18 +1,24 @@
+using System;
 using TMPro; // Import TextMeshPro namespace
 using UnityEngine;
-using UnityEngine.Events;
 
 public class Timer : MonoBehaviour
 {
     public TextMeshProUGUI timerText; // Reference to the TextMeshPro UI component
-    public float startTime = 60f;  // Time in seconds
     private float timeRemaining;
 
-    private bool isRunning = true;   // Flag to check if the timer is running
+    private bool isRunning = false;   // Flag to check if the timer is running
+    public Action OnTimerEnd { get; set; }
 
     void Start()
     {
+        timeRemaining = 0;  // Initialize timer
+    }
+
+    public void StartTimer(float startTime)
+    {
         timeRemaining = startTime;  // Initialize timer
+        isRunning = true;
     }
 
     void Update()
@@ -36,13 +42,7 @@ public class Timer : MonoBehaviour
         if (timeRemaining <= 0)
         {
             isRunning = false;
-            OnTimerEnd(); // Call a custom method
-        }
-
-        void OnTimerEnd()
-        {
-            Debug.Log("Timer Finished!");
-            // Add actions like changing scenes, playing a sound, etc.
+            OnTimerEnd?.Invoke(); // Call a custom method
         }
     }
 

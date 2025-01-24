@@ -2206,11 +2206,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07f42234c99498d4cb6f95a9809c00c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: {fileID: 0}
   levels:
-  - {fileID: 1536296292}
-  - {fileID: 1045833397}
-  - {fileID: 452805654}
-  - {fileID: 1441413967}
+  - Name: 
+    time: 60
+    scoreThreshold: 10
+    map: {fileID: 452805654}
+  - Name: 
+    time: 60
+    scoreThreshold: 10
+    map: {fileID: 1441413967}
+  - Name: 
+    time: 60
+    scoreThreshold: 10
+    map: {fileID: 1045833397}
+  - Name: 
+    time: 60
+    scoreThreshold: 10
+    map: {fileID: 1536296292}
 --- !u!4 &1003487764
 Transform:
   m_ObjectHideFlags: 0
