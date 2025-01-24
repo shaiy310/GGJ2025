@@ -363,6 +363,45 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -2359,7 +2398,97 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      frame0003_0: -4960229840327395196
+      frame0003_1: 7078345150919799238
+      frame0003_10: -2562007009967908711
+      frame0003_11: -5930956887675726807
+      frame0003_12: -1316467346855306589
+      frame0003_13: 7690355582129034545
+      frame0003_14: -3210866943755452238
+      frame0003_15: 5282436951123944073
+      frame0003_16: -6025782952138559418
+      frame0003_17: 5514646001824663404
+      frame0003_18: -4287458859060502098
+      frame0003_19: -5956168184915639299
+      frame0003_2: 8202485845052730707
+      frame0003_20: -3167087410485174781
+      frame0003_21: 5413392242757160130
+      frame0003_22: -947297414178987570
+      frame0003_23: 3091873997137133157
+      frame0003_24: -6600485746561839416
+      frame0003_25: 2193653219408871656
+      frame0003_26: 8459160878389219599
+      frame0003_27: -8896338139599651047
+      frame0003_28: 5167210008726243555
+      frame0003_29: 1819409726032542509
+      frame0003_3: 3562745598345809493
+      frame0003_30: -4607730896432236092
+      frame0003_31: 3835670292721294367
+      frame0003_32: 8407007415978254222
+      frame0003_33: -4508302403233969732
+      frame0003_34: -5076856287261166238
+      frame0003_35: 3267737437701576728
+      frame0003_36: 6631102368168738516
+      frame0003_37: -5624478410423924650
+      frame0003_38: 4331184904930683414
+      frame0003_39: 4417810580337433949
+      frame0003_4: -4472582533840943060
+      frame0003_40: -2882168889912669114
+      frame0003_41: 6555136679315759685
+      frame0003_42: 2844492223658396083
+      frame0003_43: -5737592610932100596
+      frame0003_44: -2507927224779642118
+      frame0003_45: 8130086596330912522
+      frame0003_46: 8169744942188326620
+      frame0003_47: -8152027411890005342
+      frame0003_48: 8392393351892330948
+      frame0003_49: 2134459157137415738
+      frame0003_5: -1744306664125416308
+      frame0003_50: 1700447562606301978
+      frame0003_51: -1863354520729852011
+      frame0003_52: -2939866125446541406
+      frame0003_53: 1985255253215419054
+      frame0003_54: -3430023347998792148
+      frame0003_55: -960525226038267588
+      frame0003_56: 6970338762357422941
+      frame0003_57: -3104355914823736753
+      frame0003_58: -8500316039635327514
+      frame0003_59: -4515339150157032998
+      frame0003_6: -491195591005434541
+      frame0003_60: -6881186090383482077
+      frame0003_61: -5188677616643565965
+      frame0003_62: 6662873310087079985
+      frame0003_63: 7088049229166652743
+      frame0003_64: -3000743127923969640
+      frame0003_65: -890611137891307970
+      frame0003_66: -7827800978416109852
+      frame0003_67: -4657059733714963849
+      frame0003_68: -3712541272436311805
+      frame0003_69: -7275735866285363292
+      frame0003_7: -5187989268619181087
+      frame0003_70: 9020853773225705802
+      frame0003_71: -2089203971734416407
+      frame0003_72: 2284518240393925382
+      frame0003_73: -4317337866898898141
+      frame0003_74: -8649344845084514852
+      frame0003_75: 446164171325802643
+      frame0003_76: -4638923670750991711
+      frame0003_77: 5937328713265231462
+      frame0003_78: 2879880969460407081
+      frame0003_79: 9072318774758279483
+      frame0003_8: 8745409845313565886
+      frame0003_80: -3059027824461800633
+      frame0003_81: -4880453212654351675
+      frame0003_82: -8228797063652790729
+      frame0003_83: -1380056307250308413
+      frame0003_84: 6355746834734003578
+      frame0003_85: 6211342174999034474
+      frame0003_86: -5111279885172327618
+      frame0003_87: 3247549490992772905
+      frame0003_88: -2338376202510634380
+      frame0003_89: -4747525426663404650
+      frame0003_9: -8246111498486740458
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
