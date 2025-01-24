@@ -8,6 +8,7 @@ public class BubbleMechanics : MonoBehaviour
 {
     Rigidbody2D rb;
     [SerializeField] float bubbleForce = -5;
+    [SerializeField] private AudioEvent _audioEvent;
     private float bubbleGravity = -0.1f;
 
     void Start()
@@ -72,6 +73,7 @@ public class BubbleMechanics : MonoBehaviour
         var animator = GetComponentInChildren<Animator>();
         animator.SetTrigger("Explosion");
         yield return null;
+        _audioEvent.Play();
         var stateInfo = animator.GetCurrentAnimatorStateInfo(0);
         yield return new WaitForSeconds(stateInfo.length);
         Destroy(gameObject);

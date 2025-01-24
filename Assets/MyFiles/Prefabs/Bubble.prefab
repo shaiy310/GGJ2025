@@ -4960,6 +4960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bubbleForce: -3
+  _audioEvent: {fileID: 11400000, guid: 0908bdbde04964340a3722bbbd4962d3, type: 2}
 --- !u!50 &1957063890721773023
 Rigidbody2D:
   serializedVersion: 5
