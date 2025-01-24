@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6652659643278953053}
   - component: {fileID: 1355192371422310545}
-  - component: {fileID: 6277730716196632719}
   - component: {fileID: 3512670086739811051}
   m_Layer: 0
   m_Name: BubbleBall
@@ -89,33 +88,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &6277730716196632719
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4376904110425140364}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: -0.1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!58 &3512670086739811051
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -162,6 +134,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2905182216100901488}
   - component: {fileID: 6045608011604455677}
+  - component: {fileID: 1957063890721773023}
   m_Layer: 0
   m_Name: Bubble
   m_TagString: Untagged
@@ -197,5 +170,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13b39d047bff1094aa64fa3aadddf4c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 6277730716196632719}
+  rb: {fileID: 1957063890721773023}
   bubbleForce: -3
+--- !u!50 &1957063890721773023
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5821387827993624980}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: -0.1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
