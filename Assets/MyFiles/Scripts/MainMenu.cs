@@ -1,4 +1,5 @@
 using System;
+using DG.Tweening;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -39,6 +40,8 @@ namespace MyFiles.Scripts
 		private void ShowControls()
 		{
 			_controlsScreen.SetActive(true);
+			_controlsScreen.transform.DOScale(Vector3.one, 0.3f).SetEase(Ease.OutBack);
+			_controlsScreen.transform.localScale = Vector3.zero;
 		}
 
 		private void HideControls()
