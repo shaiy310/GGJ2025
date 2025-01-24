@@ -310,7 +310,14 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      PainBarcode_0: 5825694138510502268
+      PainBarcode_1: 2578226345351019747
+      PainBarcode_2: 1594337063901020752
+      PainBarcode_3: 5979020796812579768
+      PainBarcode_4: -5835040946695377718
+      PainBarcode_5: -8359474791093305046
+      PainBarcode_6: 2114355281879845881
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
