@@ -11,5 +11,10 @@ namespace MyFiles.Scripts
 		{
 			Messenger.Default.Publish(new InputEvent(context.ReadValue<float>()));
 		}
+
+		public void OnPushDown(InputAction.CallbackContext context)
+		{
+            Messenger.Default.Publish(new PushDownEvent(context.ReadValueAsButton()));
+        }
 	}
 }

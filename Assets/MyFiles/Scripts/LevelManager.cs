@@ -18,12 +18,11 @@ namespace MyFiles.Scripts
 		private void Awake()
 		{
 			Instance = this;
-			LoadLevel(0);
 		}
 
 		private void Start()
 		{
-			SetBounds();
+			LoadLevel(0);
 		}
 
         private void LoadLevel(int level)
@@ -32,6 +31,7 @@ namespace MyFiles.Scripts
 			for (int i = 0; i < levels.Length; i++) {
 				levels[Level].SetActive(i == level);
 			}
+			SetBounds();
         }
 
         private void SetBounds()

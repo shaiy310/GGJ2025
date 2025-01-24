@@ -1,20 +1,37 @@
+using MyFiles.Scripts.Events;
+using SuperMaxim.Messaging;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Windows;
 
 public class BubbleSpawner : MonoBehaviour
 {
-    [SerializeField] Transform spawnPoint;
-    [SerializeField] GameObject prefab;
+    [SerializeField] BubbleMechanics prefab;
     [SerializeField] float spawnDelay = 0.25f;
+    [SerializeField] float spawnInterval = 0.5f;
 
     Coroutine spawner;
 
-    private void Update()
+    private void OnEnable()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && spawner == null) {
+        Messenger.Default.Subscribe<PushDownEvent>(OnInput);
+        Debug.Log("registered");
+    }
+
+    private void OnDisable()
+    {
+        Messenger.Default.Unsubscribe<PushDownEvent>(OnInput);
+    }
+
+    private void OnInput(PushDownEvent pushDownEvent)
+    {
+        Debug.Log("oninput");
+        if (pushDownEvent.IsPressed && spawner == null) {
+            Debug.Log("down");
             spawner = StartCoroutine(SpawnBubble());
         }
-        if (Input.GetKeyUp(KeyCode.Space)) {
+        if (!pushDownEvent.IsPressed && spawner != null) {
+            Debug.Log("up");
             StopCoroutine(spawner);
             spawner = null;
         }
@@ -24,9 +41,9 @@ public class BubbleSpawner : MonoBehaviour
     {
         yield return new WaitForSeconds(spawnDelay);
         
-        if (Input.GetKey(KeyCode.Space)) { 
-            Instantiate(prefab, spawnPoint);
+        while (true) {
+            Instantiate(prefab, transform.position, Quaternion.identity);
+            yield return new WaitForSeconds(spawnInterval);
         }
-        spawner = null;
     }
 }
