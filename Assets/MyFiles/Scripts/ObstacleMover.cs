@@ -37,7 +37,7 @@ namespace MyFiles.Scripts
 		private void Move()
 		{
 			_speed = Mathf.MoveTowards(_speed, _inputDirection * MaxSpeed, SpeedChangePerSecond * Time.deltaTime);
-			transform.Translate(_speed * Time.deltaTime, 0, 0);
+			transform.Translate(_speed * Time.deltaTime, 0, 0, Space.World);
 			HandleOutOfBound();
 		}
 
@@ -45,11 +45,11 @@ namespace MyFiles.Scripts
 		{
 			if (transform.position.x < MinX)
 			{
-				transform.Translate(MaxX - MinX, 0, 0);
+				transform.Translate(MaxX - MinX, 0, 0, Space.World);
 			}
 			else if (transform.position.x > MaxX)
 			{
-				transform.Translate(MinX - MaxX, 0, 0);
+				transform.Translate(MinX - MaxX, 0, 0, Space.World);
 			}
 		}
 	}
