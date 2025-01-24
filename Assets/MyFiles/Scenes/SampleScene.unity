@@ -1789,11 +1789,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 350562597271404868, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
       propertyPath: m_Size.x
-      value: 0.39821556
+      value: 0.3848116
       objectReference: {fileID: 0}
     - target: {fileID: 350562597271404868, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
       propertyPath: m_Size.y
-      value: 4.703399
+      value: 5.0381927
       objectReference: {fileID: 0}
     - target: {fileID: 3622875545488044669, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
       propertyPath: m_LocalScale.x
@@ -1849,11 +1849,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6536002859940111427, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.02859
+      value: -0.04777
       objectReference: {fileID: 0}
     - target: {fileID: 6536002859940111427, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.0356
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4276,7 +4276,7 @@ MonoBehaviour:
     scoreThreshold: 10
     map: {fileID: 287272502}
   - Name: 0-2
-    time: 60
+    time: 90
     scoreThreshold: 10
     map: {fileID: 1917666653}
   - Name: 1
