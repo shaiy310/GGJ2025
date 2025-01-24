@@ -11,7 +11,6 @@ namespace MyFiles.Scripts
 			if (other.gameObject.tag == "Bubble")
 			{
 				Destroy(other.gameObject);
-				// todo - add score.
 				Messenger.Default.Publish(new BubbleFinishedEvent());
 			}
 		}
