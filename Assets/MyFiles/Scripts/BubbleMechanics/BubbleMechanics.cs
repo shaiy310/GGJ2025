@@ -5,12 +5,15 @@ using UnityEngine;
 
 public class BubbleMechanics : MonoBehaviour
 {
-    [SerializeField] Rigidbody2D rb;
+    Rigidbody2D rb;
     [SerializeField] float bubbleForce = -5;
     private float bubbleGravity = -0.1f;
 
     void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
+        rb.gravityScale = 1;
+
         SpawnAnimation();
     }
 
@@ -47,6 +50,11 @@ public class BubbleMechanics : MonoBehaviour
         {
             // Bubble pop animation
             Destroy(gameObject);
+        }
+
+        if (collision.collider.tag == "Walls")
+        {
+            rb.gravityScale = -0.3f;
         }
     }
 }
