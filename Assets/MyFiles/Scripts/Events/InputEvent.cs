@@ -1,6 +1,6 @@
 namespace MyFiles.Scripts.Events
 {
-	public class InputEvent
+    public class InputEvent
 	{
 		public float HorizontalMovement;
 
@@ -9,14 +9,4 @@ namespace MyFiles.Scripts.Events
 			HorizontalMovement = horizontalMovement;
 		}
 	}
-
-    public class PushDownEvent
-    {
-        public bool IsPressed { get; private set; }
-
-        public PushDownEvent(bool isPressed)
-        {
-            IsPressed = isPressed;
-        }
-    }
 }

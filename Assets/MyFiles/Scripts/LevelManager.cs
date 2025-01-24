@@ -1,3 +1,5 @@
+using MyFiles.Scripts.Events;
+using SuperMaxim.Messaging;
 using System;
 using UnityEngine;
 
@@ -31,7 +33,26 @@ namespace MyFiles.Scripts
 			Instance = this;
 		}
 
-		private void Start()
+        private void OnEnable()
+        {
+            Messenger.Default.Subscribe<ScoreChangedEvent>(OnScoreChanged);
+        }
+
+        private void OnDisable()
+        {
+            Messenger.Default.Unsubscribe<ScoreChangedEvent>(OnScoreChanged);
+        }
+
+        private void OnScoreChanged(ScoreChangedEvent scoreChangedEvent)
+        {
+            score = scoreChangedEvent.Score;
+			if (score >= levels[Level].scoreThreshold) {
+				OnEndLevel();
+
+            }
+        }
+
+        private void Start()
 		{
             timer.OnTimerEnd += OnEndLevel;
 			LoadLevel(0);
@@ -45,6 +66,7 @@ namespace MyFiles.Scripts
 			}
 			SetBounds();
 			timer.StartTimer(levels[level].time);
+            Messenger.Default.Publish(new NewLevelEvent());
         }
 
         private void OnEndLevel()
@@ -55,6 +77,7 @@ namespace MyFiles.Scripts
 					LoadLevel(Level + 1);
 				} else {
 					// end all levels
+					Debug.Log("finished all levels");
 				}
             } else {
 				LoadLevel(Level);
