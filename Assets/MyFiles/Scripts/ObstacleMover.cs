@@ -6,10 +6,13 @@ namespace MyFiles.Scripts
 {
 	public class ObstacleMover : MonoBehaviour
 	{
+		private static float MinX => LevelManager.Instance.MinX;
+		private static float MaxX => LevelManager.Instance.MaxX;
+		private const float MaxSpeed = 2f;
+		private const float SpeedChangePerSecond = 2f;
+
 		private float _inputDirection;
-		private const float MinX = -5f;
-		private const float MaxX = 5f;
-		private const float Speed = 2f;
+		private float _speed;
 
 		private void OnEnable()
 		{
@@ -33,25 +36,20 @@ namespace MyFiles.Scripts
 
 		private void Move()
 		{
-			if (_inputDirection == 0)
-			{
-				return;
-			}
-
-			transform.Translate(_inputDirection * Speed * Time.deltaTime, 0, 0);
+			_speed = Mathf.MoveTowards(_speed, _inputDirection * MaxSpeed, SpeedChangePerSecond * Time.deltaTime);
+			transform.Translate(_speed * Time.deltaTime, 0, 0);
 			HandleOutOfBound();
 		}
 
 		private void HandleOutOfBound()
 		{
-			switch (transform.position.x)
+			if (transform.position.x < MinX)
 			{
-				case < MinX:
-					transform.Translate(MaxX - MinX, 0, 0);
-					break;
-				case > MaxX:
-					transform.Translate(MinX - MaxX, 0, 0);
-					break;
+				transform.Translate(MaxX - MinX, 0, 0);
+			}
+			else if (transform.position.x > MaxX)
+			{
+				transform.Translate(MinX - MaxX, 0, 0);
 			}
 		}
 	}
