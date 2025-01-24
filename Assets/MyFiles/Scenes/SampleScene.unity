@@ -2206,7 +2206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07f42234c99498d4cb6f95a9809c00c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: {fileID: 0}
+  timer: {fileID: 1881141415}
   levels:
   - Name: 
     time: 60
@@ -4751,6 +4751,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8499031399347667609, guid: 5d8bf01e81bcbd544974aa5147ed4d15, type: 3}
   m_PrefabInstance: {fileID: 1854297486}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1881141415 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5307024063751160695, guid: 5d044435decd93346a90bddab3848d0b, type: 3}
+  m_PrefabInstance: {fileID: 692145736803486876}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56e4d7ea28e960e43bb94f8b79f80683, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1905922896
 PrefabInstance:
   m_ObjectHideFlags: 0
