@@ -1,30 +1,93 @@
+using MyFiles.Scripts.Events;
+using SuperMaxim.Messaging;
+using System;
 using UnityEngine;
 
 namespace MyFiles.Scripts
 {
+	[Serializable]
+	struct Level
+	{
+		public string Name;
+		public float time;
+		public int scoreThreshold;
+		public GameObject map;
+	}
+
 	public class LevelManager : MonoBehaviour
 	{
-		private Bounds _bounds;
+		public static LevelManager Instance { get; private set; }
 
+		[SerializeField] Timer timer;
+		[SerializeField] Level[] levels;
+		int score = 0; // TBD
+		
+		public int Level { get; private set; }
 		public float MinX => _bounds.min.x - _bounds.center.x;
 		public float MaxX => _bounds.max.x - _bounds.center.x;
 
-		public static LevelManager Instance;
+		private Bounds _bounds;
 
 		private void Awake()
 		{
 			Instance = this;
 		}
 
-		private void Start()
+        private void OnEnable()
+        {
+            Messenger.Default.Subscribe<ScoreChangedEvent>(OnScoreChanged);
+        }
+
+        private void OnDisable()
+        {
+            Messenger.Default.Unsubscribe<ScoreChangedEvent>(OnScoreChanged);
+        }
+
+        private void OnScoreChanged(ScoreChangedEvent scoreChangedEvent)
+        {
+            score = scoreChangedEvent.Score;
+			if (score >= levels[Level].scoreThreshold) {
+				OnEndLevel();
+
+            }
+        }
+
+        private void Start()
 		{
-			SetBounds();
+            timer.OnTimerEnd += OnEndLevel;
+			LoadLevel(0);
 		}
 
-		private void SetBounds()
+        private void LoadLevel(int level)
+        {
+            Level = level;
+			for (int i = 0; i < levels.Length; i++) {
+				levels[i].map.SetActive(i == level);
+			}
+			SetBounds();
+			timer.StartTimer(levels[level].time);
+            Messenger.Default.Publish(new NewLevelEvent());
+        }
+
+        private void OnEndLevel()
+        {
+            // check score
+			if (score >= levels[Level].scoreThreshold) {
+				if (Level + 1 < levels.Length) {
+					LoadLevel(Level + 1);
+				} else {
+					// end all levels
+					Debug.Log("finished all levels");
+				}
+            } else {
+				LoadLevel(Level);
+			}
+        }
+
+        private void SetBounds()
 		{
 			_bounds = new Bounds();
-			var obstacleMovers = FindObjectsOfType<ObstacleMover>();
+			var obstacleMovers = levels[Level].map.GetComponentsInChildren<ObstacleMover>();
 			foreach (var obstacleMover in obstacleMovers)
 			{
 				var spriteRenderer = obstacleMover.GetComponent<SpriteRenderer>();

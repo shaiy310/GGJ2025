@@ -1,6 +1,6 @@
 namespace MyFiles.Scripts.Events
 {
-	public class InputEvent
+    public class InputEvent
 	{
 		public float HorizontalMovement;
 
