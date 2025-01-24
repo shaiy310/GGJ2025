@@ -29,7 +29,7 @@ namespace MyFiles.Scripts
         {
             Level = level;
 			for (int i = 0; i < levels.Length; i++) {
-				levels[Level].SetActive(i == level);
+				levels[i].SetActive(i == level);
 			}
 			SetBounds();
         }
