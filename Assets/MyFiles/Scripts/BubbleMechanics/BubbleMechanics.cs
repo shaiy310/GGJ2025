@@ -1,4 +1,6 @@
 using DG.Tweening;
+using MyFiles.Scripts.Events;
+using SuperMaxim.Messaging;
 using UnityEngine;
 
 public class BubbleMechanics : MonoBehaviour
@@ -9,30 +11,31 @@ public class BubbleMechanics : MonoBehaviour
 
     void Start()
     {
-        Spawn();
+        SpawnAnimation();
     }
 
-    void Update()
+    private void OnEnable()
     {
-        BubblePusher();
+        Messenger.Default.Subscribe<PushDownEvent>(BubblePusher);
     }
 
-    void BubblePusher ()
+    private void OnDisable()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
+        Messenger.Default.Unsubscribe<PushDownEvent>(BubblePusher);
+    }
+
+    void BubblePusher (PushDownEvent pushDownEvent)
+    {
+        if (pushDownEvent.IsPressed) {
             rb.gravityScale = 0;
             rb.linearVelocityY = bubbleForce;
         }
-
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
+        if (!pushDownEvent.IsPressed) {
             rb.gravityScale = bubbleGravity;
         }
-
     }
 
-    void Spawn ()
+    void SpawnAnimation()
     {
         transform.localScale = Vector3.zero;
         transform.DOScale(1, 0.5f);
