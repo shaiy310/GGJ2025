@@ -2978,18 +2978,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: {fileID: 1881141415}
   levels:
-  - Name: 0-2
+  - Name: 0
     time: 60
     scoreThreshold: 10
-    map: {fileID: 1917666653}
+    map: {fileID: 1005396898}
   - Name: 0-1
     time: 60
     scoreThreshold: 10
     map: {fileID: 287272502}
-  - Name: 1
+  - Name: 0-2
     time: 60
     scoreThreshold: 10
-    map: {fileID: 1005396898}
+    map: {fileID: 1917666653}
   - Name: 
     time: 60
     scoreThreshold: 10
