@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 47478b1dc89a0364b9d0bd1efed39a4c
+guid: b2ea84799cdf1294e95585de366e4a3f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7882443970813656792
-    second: finish line_0
+      213: -8318928565530365597
+    second: GotIt_0
+  - first:
+      213: 4189963209022544128
+    second: GotIt_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: finish line_0
+      name: GotIt_0
       rect:
         serializedVersion: 2
-        x: 83
-        y: 43
-        width: 337
-        height: 241
+        x: 0
+        y: 0
+        width: 58
+        height: 30
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +144,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8218bb5b8feeb9290800000000000000
-      internalID: -7882443970813656792
+      spriteID: 36176b39b8a3d8c80800000000000000
+      internalID: -8318928565530365597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GotIt_1
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 0
+        width: 44
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0099eb7d65db52a30800000000000000
+      internalID: 4189963209022544128
       vertices: []
       indices: 
       edges: []
@@ -160,8 +185,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      finish line_0: -7882443970813656792
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
