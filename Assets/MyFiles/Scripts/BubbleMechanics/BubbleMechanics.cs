@@ -1,3 +1,4 @@
+using System.Collections;
 using DG.Tweening;
 using MyFiles.Scripts.Events;
 using SuperMaxim.Messaging;
@@ -49,12 +50,23 @@ public class BubbleMechanics : MonoBehaviour
         if (collision.collider.tag == "Obstacle")
         {
             // Bubble pop animation
-            Destroy(gameObject);
+            StartCoroutine(PopAnimation());
+            
         }
 
         if (collision.collider.tag == "Walls")
         {
             rb.gravityScale = -0.3f;
         }
+    }
+
+    private IEnumerator PopAnimation()
+    {
+        var animator = GetComponentInChildren<Animator>();
+        animator.SetTrigger("Explosion");
+        yield return null;
+        var stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        yield return new WaitForSeconds(stateInfo.length);
+        Destroy(gameObject);
     }
 }
