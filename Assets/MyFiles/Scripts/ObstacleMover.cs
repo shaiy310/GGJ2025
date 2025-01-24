@@ -9,7 +9,7 @@ namespace MyFiles.Scripts
 		private static float MinX => LevelManager.Instance.MinX;
 		private static float MaxX => LevelManager.Instance.MaxX;
 		private const float MaxSpeed = 4f;
-		private const float SpeedChangePerSecond = 8f;
+		private const float SpeedChangePerSecond = 16f;
 
 		private float _inputDirection;
 		private float _speed;
