@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3640922942133647697}
   - component: {fileID: 7734490217056496584}
   - component: {fileID: 1814695067401198921}
+  - component: {fileID: 426130739873580218}
   - component: {fileID: -6973160776012692909}
   m_Layer: 0
   m_Name: Finish
@@ -119,7 +120,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -135,6 +136,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &426130739873580218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5401967168071437995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fc272a6aecbf0b4bbf6067c1e2bb244, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &-6973160776012692909
 MonoBehaviour:
   m_ObjectHideFlags: 0
