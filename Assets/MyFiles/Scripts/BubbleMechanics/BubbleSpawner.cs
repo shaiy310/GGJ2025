@@ -15,7 +15,6 @@ public class BubbleSpawner : MonoBehaviour
     private void OnEnable()
     {
         Messenger.Default.Subscribe<PushDownEvent>(OnInput);
-        Debug.Log("registered");
     }
 
     private void OnDisable()
@@ -25,13 +24,10 @@ public class BubbleSpawner : MonoBehaviour
 
     private void OnInput(PushDownEvent pushDownEvent)
     {
-        Debug.Log("oninput");
         if (pushDownEvent.IsPressed && spawner == null) {
-            Debug.Log("down");
             spawner = StartCoroutine(SpawnBubble());
         }
         if (!pushDownEvent.IsPressed && spawner != null) {
-            Debug.Log("up");
             StopCoroutine(spawner);
             spawner = null;
         }
