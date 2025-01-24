@@ -1,3 +1,4 @@
+using System.Collections;
 using DG.Tweening;
 using MyFiles.Scripts.Events;
 using SuperMaxim.Messaging;
@@ -20,11 +21,13 @@ public class BubbleMechanics : MonoBehaviour
     private void OnEnable()
     {
         Messenger.Default.Subscribe<PushDownEvent>(BubblePusher);
+        Messenger.Default.Subscribe<NewLevelEvent>(OnStartNewLevel);
     }
 
     private void OnDisable()
     {
         Messenger.Default.Unsubscribe<PushDownEvent>(BubblePusher);
+        Messenger.Default.Unsubscribe<NewLevelEvent>(OnStartNewLevel);
     }
 
     void BubblePusher (PushDownEvent pushDownEvent)
@@ -38,6 +41,11 @@ public class BubbleMechanics : MonoBehaviour
         }
     }
 
+    void OnStartNewLevel(NewLevelEvent newLevelEvent)
+    {
+        Destroy(gameObject, 0.1f);
+    }
+
     void SpawnAnimation()
     {
         transform.localScale = Vector3.zero;
@@ -46,15 +54,26 @@ public class BubbleMechanics : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.tag == "Obstacle")
+        if (collision.collider.CompareTag("Obstacle"))
         {
             // Bubble pop animation
-            Destroy(gameObject);
+            StartCoroutine(PopAnimation());
+            
         }
 
-        if (collision.collider.tag == "Walls")
+        if (collision.collider.CompareTag("Walls"))
         {
             rb.gravityScale = -0.3f;
         }
+    }
+
+    private IEnumerator PopAnimation()
+    {
+        var animator = GetComponentInChildren<Animator>();
+        animator.SetTrigger("Explosion");
+        yield return null;
+        var stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+        yield return new WaitForSeconds(stateInfo.length);
+        Destroy(gameObject);
     }
 }
