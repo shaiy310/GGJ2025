@@ -246,6 +246,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallSmooth
       objectReference: {fileID: 0}
+    - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -321,6 +325,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallSmooth (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -386,6 +394,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallSmooth
       objectReference: {fileID: 0}
+    - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -450,6 +462,10 @@ PrefabInstance:
     - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
       propertyPath: m_Name
       value: WallSmooth (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -521,6 +537,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallSmooth (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -590,6 +610,10 @@ PrefabInstance:
     - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
       propertyPath: m_Name
       value: WallSmooth (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -862,6 +886,10 @@ PrefabInstance:
     - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
       propertyPath: m_Name
       value: WallSmooth (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1668,6 +1696,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallSmooth (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1732,6 +1764,10 @@ PrefabInstance:
     - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
       propertyPath: m_Name
       value: WallSmooth (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1894,6 +1930,10 @@ PrefabInstance:
     - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
       propertyPath: m_Name
       value: WallSmooth (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2434,6 +2474,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallSmooth (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2498,6 +2542,10 @@ PrefabInstance:
     - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
       propertyPath: m_Name
       value: WallSmooth (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2569,6 +2617,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallSmooth (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2638,6 +2690,10 @@ PrefabInstance:
     - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
       propertyPath: m_Name
       value: WallSmooth (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2804,6 +2860,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallSmooth (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2963,6 +3023,10 @@ PrefabInstance:
     - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
       propertyPath: m_Name
       value: WallSmooth (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3256,6 +3320,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallSmooth (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3369,6 +3437,10 @@ PrefabInstance:
     - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
       propertyPath: m_Name
       value: WallSmooth (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3743,6 +3815,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallSmooth (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3901,6 +3977,10 @@ PrefabInstance:
     - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
       propertyPath: m_Name
       value: WallSmooth (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4102,6 +4182,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallSmooth (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4166,6 +4250,10 @@ PrefabInstance:
     - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
       propertyPath: m_Name
       value: WallSmooth (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4237,6 +4325,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallSmooth (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4306,6 +4398,10 @@ PrefabInstance:
     - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
       propertyPath: m_Name
       value: WallSmooth (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4489,6 +4585,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: WallSmooth (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_TagString
+      value: Walls
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4553,6 +4653,10 @@ PrefabInstance:
     - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
       propertyPath: m_Name
       value: WallSmooth
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4693,6 +4797,10 @@ PrefabInstance:
     - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
       propertyPath: m_Name
       value: WallSmooth (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699201219611562772, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_TagString
+      value: Walls
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
