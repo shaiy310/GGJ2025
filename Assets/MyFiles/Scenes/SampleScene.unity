@@ -4778,6 +4778,8 @@ MonoBehaviour:
   _fadeImage: {fileID: 692145736803486877}
   _fadeInTime: 1
   _fadeOutTime: 1
+  _levelTransitionAudioEvent: {fileID: 11400000, guid: c12b63b5aa0b06e4b9bde3b6a4d7f82c, type: 2}
+  _levelWinAudioEvent: {fileID: 11400000, guid: 5b6d89a7c31401d49b2c66135d286492, type: 2}
 --- !u!4 &1003487764
 Transform:
   m_ObjectHideFlags: 0

@@ -36,7 +36,9 @@ namespace MyFiles.Scripts
 		[SerializeField] private VideoActivator _videoActivator;
 		[SerializeField] private Image _fadeImage;
 		[SerializeField] private float _fadeInTime = 0.2f; 
-		[SerializeField] private float _fadeOutTime = 0.3f; 
+		[SerializeField] private float _fadeOutTime = 0.3f;
+		[SerializeField] private AudioEvent _levelTransitionAudioEvent;
+		[SerializeField] private AudioEvent _levelWinAudioEvent;
 
 		private void Awake()
 		{
@@ -58,7 +60,6 @@ namespace MyFiles.Scripts
             score = scoreChangedEvent.Score;
 			if (score == levels[Level].scoreThreshold) {
 				OnEndLevel();
-
             }
         }
 
@@ -77,6 +78,7 @@ namespace MyFiles.Scripts
         {
 	        //fade in
 	        _videoActivator.PlayVideo();
+	        _levelTransitionAudioEvent.Play();
 	        if (level != 0)
 	        {
 		        yield return StartCoroutine(FadeEnumerator(0, 1, _fadeInTime));
@@ -123,6 +125,7 @@ namespace MyFiles.Scripts
         {
             // check score
 			if (score >= levels[Level].scoreThreshold) {
+				_levelWinAudioEvent.Play();
 				if (Level + 1 < levels.Length) {
 					LoadLevel(Level + 1);
 				} else {

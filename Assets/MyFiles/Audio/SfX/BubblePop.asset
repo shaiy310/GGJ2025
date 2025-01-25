@@ -12,12 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22143c2e90167f241810fb1325f638e8, type: 3}
   m_Name: BubblePop
   m_EditorClassIdentifier: 
-  clips: []
+  clips:
+  - {fileID: 8300000, guid: fc9d6a351ce26f9409c6e7d772f659a1, type: 3}
+  - {fileID: 8300000, guid: 87587afe5fef2ec47827e3fd889ea2b7, type: 3}
+  - {fileID: 8300000, guid: d5665b511b07a2f489f0bbe6bdde91e1, type: 3}
   volume:
     minValue: 0.95
     maxValue: 1
   pitch:
-    minValue: 0.95
-    maxValue: 1.05
+    minValue: 0.8846557
+    maxValue: 1.0873393
   spatialBlend: 0
   audioGroup: {fileID: 0}
