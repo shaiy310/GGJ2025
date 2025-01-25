@@ -10,6 +10,8 @@ public class BubbleSpawner : MonoBehaviour
     [SerializeField] float spawnDelay = 0.25f;
     [SerializeField] float spawnInterval = 0.5f;
 
+    [SerializeField] private ParticleSystem _particleSystem;
+
     Coroutine spawner;
 
     private void OnEnable()
@@ -30,11 +32,13 @@ public class BubbleSpawner : MonoBehaviour
         if (!pushDownEvent.IsPressed && spawner != null) {
             StopCoroutine(spawner);
             spawner = null;
+            _particleSystem.Stop();
         }
     }
 
     IEnumerator SpawnBubble()
     {
+        _particleSystem.Play();
         yield return new WaitForSeconds(spawnDelay);
         
         while (true) {
