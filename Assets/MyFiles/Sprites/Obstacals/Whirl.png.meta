@@ -126,7 +126,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Asset 2_0
+      name: Whirl
       rect:
         serializedVersion: 2
         x: 31
@@ -134,7 +134,7 @@ TextureImporter:
         width: 386
         height: 260
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b26cfeb956c301e4aa54302788334980
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Asset 2_0: 7142518519572273488
+      Whirl: 7142518519572273488
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
