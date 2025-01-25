@@ -30,13 +30,13 @@ public class Claw : MonoBehaviour
     private IEnumerator RunAnimation()
     {
         while (true) {
-            topPivot.DORotate(rotationAngle * Vector3.back, animationTime);
-            bottomPivot.DORotate(rotationAngle * Vector3.forward, animationTime);
+            topPivot.DOLocalRotate(rotationAngle * Vector3.back, animationTime);
+            bottomPivot.DOLocalRotate(rotationAngle * Vector3.forward, animationTime);
 
             yield return new WaitForSeconds(animationTime + openTime);
             
-            topPivot.DORotate(Vector3.zero, animationTime);
-            bottomPivot.DORotate(Vector3.zero, animationTime);
+            topPivot.DOLocalRotate(Vector3.zero, animationTime);
+            bottomPivot.DOLocalRotate(Vector3.zero, animationTime);
 
             yield return new WaitForSeconds(animationTime + closeTime);
         }
