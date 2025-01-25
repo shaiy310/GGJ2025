@@ -22,17 +22,18 @@ namespace MyFiles.Scripts
     {
         public static LevelManager Instance { get; private set; }
 
-        [SerializeField] Timer timer;
         [SerializeField] Level[] levels;
+        [SerializeField] Timer timer;
         [SerializeField] TextMeshProUGUI levelNameTxt;
         [SerializeField] TextMeshProUGUI thresholdTxt;
-        int score = 0; // TBD
+        
         
         public int Level { get; private set; }
         public float MinX => _bounds.min.x - _bounds.center.x;
         public float MaxX => _bounds.max.x - _bounds.center.x;
 
         private Bounds _bounds;
+        int score = 0; // TBD
 
         [SerializeField] private VideoActivator _videoActivator;
         [SerializeField] private Image _fadeImage;
@@ -49,11 +50,18 @@ namespace MyFiles.Scripts
         private void OnEnable()
         {
             Messenger.Default.Subscribe<ScoreChangedEvent>(OnScoreChanged);
+            Messenger.Default.Subscribe<EscapeEvent>(OnEscape);
         }
 
         private void OnDisable()
         {
             Messenger.Default.Unsubscribe<ScoreChangedEvent>(OnScoreChanged);
+            Messenger.Default.Unsubscribe<EscapeEvent>(OnEscape);
+        }
+
+        void OnEscape(EscapeEvent escapeEvent)
+        {
+            SceneManager.LoadScene(0);
         }
 
         private void OnScoreChanged(ScoreChangedEvent scoreChangedEvent)
@@ -80,13 +88,10 @@ namespace MyFiles.Scripts
             //fade in
             _videoActivator.PlayVideo();
             _levelTransitionAudioEvent.Play();
-            if (level != 0)
-            {
-                yield return StartCoroutine(FadeEnumerator(0, 1, _fadeInTime));
-            }
-            else
-            {
+            if (level == 0) {
                 yield return StartCoroutine(FadeEnumerator(1, 1, _fadeInTime));
+            } else {
+                yield return StartCoroutine(FadeEnumerator(0, 1, _fadeInTime));
             }
 
             //load the actual level
@@ -102,7 +107,7 @@ namespace MyFiles.Scripts
             Messenger.Default.Publish(new NewLevelEvent());
             
             //fade out
-            yield return StartCoroutine(FadeEnumerator(1,0,_fadeOutTime));
+            yield return StartCoroutine(FadeEnumerator(1, 0, _fadeOutTime));
         }
 
         private IEnumerator FadeEnumerator(float from, float to, float time)
