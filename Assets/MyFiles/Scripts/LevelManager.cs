@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace MyFiles.Scripts
@@ -148,6 +149,7 @@ namespace MyFiles.Scripts
             } else {
                 // end all levels
                 Debug.Log("finished all levels");
+                SceneManager.LoadScene(0);
             }
         }
 
