@@ -26,14 +26,15 @@ namespace MyFiles.Scripts
         [SerializeField] Timer timer;
         [SerializeField] TextMeshProUGUI levelNameTxt;
         [SerializeField] TextMeshProUGUI thresholdTxt;
-        
-        
-        public int Level { get; private set; }
+
+
+        public static int CurrentLevel { get; private set; } = 0;
         public float MinX => _bounds.min.x - _bounds.center.x;
         public float MaxX => _bounds.max.x - _bounds.center.x;
 
         private Bounds _bounds;
         int score = 0; // TBD
+        bool firstLoad;
 
         [SerializeField] private VideoActivator _videoActivator;
         [SerializeField] private Image _fadeImage;
@@ -45,6 +46,7 @@ namespace MyFiles.Scripts
         private void Awake()
         {
             Instance = this;
+            firstLoad = true;
         }
 
         private void OnEnable()
@@ -67,7 +69,7 @@ namespace MyFiles.Scripts
         private void OnScoreChanged(ScoreChangedEvent scoreChangedEvent)
         {
             score = scoreChangedEvent.Score;
-            if (score == levels[Level].scoreThreshold) {
+            if (score == levels[CurrentLevel].scoreThreshold) {
                 OnEndLevel();
             }
         }
@@ -75,7 +77,7 @@ namespace MyFiles.Scripts
         private void Start()
         {
             timer.OnTimerEnd += OnEndLevel;
-            LoadLevel(0);
+            LoadLevel(CurrentLevel);
         }
 
         private void LoadLevel(int level)
@@ -90,22 +92,23 @@ namespace MyFiles.Scripts
             _videoActivator.PlayVideo();
 #endif
             _levelTransitionAudioEvent.Play();
-            if (level == 0) {
+            if (firstLoad) {
                 yield return StartCoroutine(FadeEnumerator(1, 1, _fadeInTime));
+                firstLoad = false;
             } else {
                 yield return StartCoroutine(FadeEnumerator(0, 1, _fadeInTime));
             }
 
             //load the actual level
-            Level = level;
+            CurrentLevel = level;
             for (int i = 0; i < levels.Length; i++) {
                 levels[i].map.SetActive(i == level);
             }
             SetBounds();
-            levelNameTxt.text = levels[Level].Name;
-            thresholdTxt.text = $"/{levels[Level].scoreThreshold}";
+            levelNameTxt.text = levels[CurrentLevel].Name;
+            thresholdTxt.text = $"/{levels[CurrentLevel].scoreThreshold}";
 
-            timer.StartTimer(levels[Level].time);
+            timer.StartTimer(levels[CurrentLevel].time);
             Messenger.Default.Publish(new NewLevelEvent());
             
             //fade out
@@ -132,11 +135,11 @@ namespace MyFiles.Scripts
         private void OnEndLevel()
         {
             // check score
-            if (score >= levels[Level].scoreThreshold)
+            if (score >= levels[CurrentLevel].scoreThreshold)
             {
                 OnLevelWin();
             } else {
-                LoadLevel(Level);
+                LoadLevel(CurrentLevel);
             }
         }
 
@@ -154,8 +157,8 @@ namespace MyFiles.Scripts
 
             MusicScript.Instance.UnPause();
 
-            if (Level + 1 < levels.Length) {
-                LoadLevel(Level + 1);
+            if (CurrentLevel + 1 < levels.Length) {
+                LoadLevel(CurrentLevel + 1);
             } else {
                 // end all levels
                 Debug.Log("finished all levels");
@@ -166,7 +169,7 @@ namespace MyFiles.Scripts
         private void SetBounds()
         {
             _bounds = new Bounds();
-            var obstacleMovers = levels[Level].map.GetComponentsInChildren<ObstacleMover>();
+            var obstacleMovers = levels[CurrentLevel].map.GetComponentsInChildren<ObstacleMover>();
             foreach (var obstacleMover in obstacleMovers)
             {
                 var spriteRenderers = obstacleMover.GetComponentsInChildren<SpriteRenderer>();
