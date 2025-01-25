@@ -23,24 +23,22 @@ public class Timer : MonoBehaviour
 
     void Update()
     {
-        if (isRunning)
-        {
-            // Reduce time
-            timeRemaining -= Time.deltaTime;
+        if (!isRunning) return;
 
-            // Clamp to zero to prevent negative time
-            if (timeRemaining <= 0)
-            {
-                timeRemaining = 0;
-                isRunning = false; // Stop the timer
-            }
+        // Reduce time
+        timeRemaining -= Time.deltaTime;
 
-            // Update the UI
-            UpdateTimerDisplay();
+        // Clamp to zero to prevent negative time
+        if (timeRemaining <= 0) {
+            timeRemaining = 0;
+            isRunning = false; // Stop the timer
         }
 
-        if (timeRemaining <= 0)
-        {
+        // Update the UI
+        UpdateTimerDisplay();
+
+
+        if (timeRemaining <= 0) {
             isRunning = false;
             OnTimerEnd?.Invoke(); // Call a custom method
         }
