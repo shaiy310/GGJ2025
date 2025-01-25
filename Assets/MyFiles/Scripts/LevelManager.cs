@@ -2,6 +2,7 @@ using MyFiles.Scripts.Events;
 using SuperMaxim.Messaging;
 using System;
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,6 +23,8 @@ namespace MyFiles.Scripts
 
 		[SerializeField] Timer timer;
 		[SerializeField] Level[] levels;
+		[SerializeField] TextMeshProUGUI levelNameTxt;
+		[SerializeField] TextMeshProUGUI thresholdTxt;
 		int score = 0; // TBD
 		
 		public int Level { get; private set; }
@@ -82,7 +85,10 @@ namespace MyFiles.Scripts
 		        levels[i].map.SetActive(i == level);
 	        }
 	        SetBounds();
-	        timer.StartTimer(levels[level].time);
+	        levelNameTxt.text = levels[Level].Name;
+			thresholdTxt.text = $"/{levels[Level].scoreThreshold}";
+
+            timer.StartTimer(levels[Level].time);
 	        Messenger.Default.Publish(new NewLevelEvent());
 	        
 	        //fade out
