@@ -1918,6 +1918,7 @@ GameObject:
   m_Component:
   - component: {fileID: 344326816}
   - component: {fileID: 344326817}
+  - component: {fileID: 344326818}
   m_Layer: 0
   m_Name: Tutorial (1)
   m_TagString: Untagged
@@ -1960,6 +1961,18 @@ Animation:
   m_AnimatePhysics: 0
   m_UpdateMode: 0
   m_CullingType: 0
+--- !u!114 &344326818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 344326815}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a3a459b033c0f4ebe15285fc848c98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &347174386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3923,6 +3936,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &771441509 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4545764920902126046, guid: 5d044435decd93346a90bddab3848d0b, type: 3}
+  m_PrefabInstance: {fileID: 692145736803486876}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &773939430
 GameObject:
   m_ObjectHideFlags: 0
@@ -4744,6 +4768,8 @@ MonoBehaviour:
     time: 60
     scoreThreshold: 10
     map: {fileID: 941192569}
+  levelNameTxt: {fileID: 771441509}
+  thresholdTxt: {fileID: 1231820142}
 --- !u!4 &1003487764
 Transform:
   m_ObjectHideFlags: 0
@@ -6069,6 +6095,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5d8bf01e81bcbd544974aa5147ed4d15, type: 3}
+--- !u!114 &1231820142 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1099222158808469228, guid: 5d044435decd93346a90bddab3848d0b, type: 3}
+  m_PrefabInstance: {fileID: 692145736803486876}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1238285476
 GameObject:
   m_ObjectHideFlags: 0
@@ -9754,6 +9791,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1845351613}
   - component: {fileID: 1845351614}
+  - component: {fileID: 1845351615}
   m_Layer: 0
   m_Name: Tutorial
   m_TagString: Untagged
@@ -9796,6 +9834,18 @@ Animation:
   m_AnimatePhysics: 0
   m_UpdateMode: 0
   m_CullingType: 0
+--- !u!114 &1845351615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1845351612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09a3a459b033c0f4ebe15285fc848c98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1853078203
 PrefabInstance:
   m_ObjectHideFlags: 0
