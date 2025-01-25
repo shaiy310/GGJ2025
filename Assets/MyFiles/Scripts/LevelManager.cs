@@ -148,9 +148,12 @@ namespace MyFiles.Scripts
         private IEnumerator OnLevelWinEnumerator()
         {
             _levelWinAudioEvent.Play();
+            MusicScript.Instance.Pause();
 
             yield return new WaitForSeconds(2);
-            
+
+            MusicScript.Instance.UnPause();
+
             if (Level + 1 < levels.Length) {
                 LoadLevel(Level + 1);
             } else {

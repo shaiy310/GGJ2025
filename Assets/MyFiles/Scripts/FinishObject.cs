@@ -6,11 +6,15 @@ namespace MyFiles.Scripts
 {
 	public class FinishObject : MonoBehaviour
 	{
+		[SerializeField] private AudioEvent audioEvent;
+
 		private void OnTriggerEnter2D(Collider2D other)
 		{
 			if (other.gameObject.tag == "Bubble")
 			{
-				Destroy(other.gameObject);
+                audioEvent.Play();
+
+                Destroy(other.gameObject);
 				Messenger.Default.Publish(new BubbleFinishedEvent());
 			}
 		}

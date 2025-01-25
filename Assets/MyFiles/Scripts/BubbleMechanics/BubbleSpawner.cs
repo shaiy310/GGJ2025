@@ -11,6 +11,8 @@ public class BubbleSpawner : MonoBehaviour
     [SerializeField] float spawnInterval = 0.5f;
 
     [SerializeField] private ParticleSystem _particleSystem;
+    [SerializeField] private AudioSource audioLoop;
+    [SerializeField] private AudioSource audioEnd;
 
     Coroutine spawner;
 
@@ -33,12 +35,15 @@ public class BubbleSpawner : MonoBehaviour
             StopCoroutine(spawner);
             spawner = null;
             _particleSystem.Stop();
+            audioLoop.Stop();
+            audioEnd.Play();
         }
     }
 
     IEnumerator SpawnBubble()
     {
         _particleSystem.Play();
+        audioLoop.Play();
         yield return new WaitForSeconds(spawnDelay);
         
         while (true) {

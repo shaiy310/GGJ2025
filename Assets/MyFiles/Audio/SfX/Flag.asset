@@ -10,18 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 22143c2e90167f241810fb1325f638e8, type: 3}
-  m_Name: LevelWin
+  m_Name: Flag
   m_EditorClassIdentifier: 
   clips:
-  - {fileID: 8300000, guid: e31bf30b56d877b4e9cf71991362f116, type: 3}
-  - {fileID: 8300000, guid: 1b2d8dd47939332459ff9b3703afcecf, type: 3}
-  - {fileID: 8300000, guid: d46779c8ce0658a41853564c2635d023, type: 3}
-  - {fileID: 8300000, guid: 6f3edae1755c60f42bd681e4bf383861, type: 3}
+  - {fileID: 8300000, guid: 10d1c4671bb59004f996ee75b60fbfae, type: 3}
+  - {fileID: 8300000, guid: d61eab1122b1b0a46b93abb7285e043b, type: 3}
   volume:
-    minValue: 0.99999994
-    maxValue: 0.99999994
+    minValue: 0.95
+    maxValue: 1
   pitch:
-    minValue: 1.0033255
-    maxValue: 1.0033255
+    minValue: 0.95
+    maxValue: 1.05
   spatialBlend: 0
   audioGroup: {fileID: 0}
