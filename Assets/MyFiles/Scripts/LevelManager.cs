@@ -90,8 +90,11 @@ namespace MyFiles.Scripts
 			var obstacleMovers = levels[Level].map.GetComponentsInChildren<ObstacleMover>();
 			foreach (var obstacleMover in obstacleMovers)
 			{
-				var spriteRenderer = obstacleMover.GetComponent<SpriteRenderer>();
-				_bounds.Encapsulate(spriteRenderer.bounds);
+				var spriteRenderers = obstacleMover.GetComponentsInChildren<SpriteRenderer>();
+				foreach (var spriteRenderer in spriteRenderers)
+				{
+					_bounds.Encapsulate(spriteRenderer.bounds);
+				}
 			}
 		}
 	}
