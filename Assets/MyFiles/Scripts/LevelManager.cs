@@ -1,7 +1,9 @@
 using MyFiles.Scripts.Events;
 using SuperMaxim.Messaging;
 using System;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace MyFiles.Scripts
 {
@@ -28,6 +30,11 @@ namespace MyFiles.Scripts
 
 		private Bounds _bounds;
 
+		[SerializeField] private VideoActivator _videoActivator;
+		[SerializeField] private Image _fadeImage;
+		[SerializeField] private float _fadeInTime = 0.2f; 
+		[SerializeField] private float _fadeOutTime = 0.3f; 
+
 		private void Awake()
 		{
 			Instance = this;
@@ -46,7 +53,7 @@ namespace MyFiles.Scripts
         private void OnScoreChanged(ScoreChangedEvent scoreChangedEvent)
         {
             score = scoreChangedEvent.Score;
-			if (score >= levels[Level].scoreThreshold) {
+			if (score == levels[Level].scoreThreshold) {
 				OnEndLevel();
 
             }
@@ -60,13 +67,43 @@ namespace MyFiles.Scripts
 
         private void LoadLevel(int level)
         {
-            Level = level;
-			for (int i = 0; i < levels.Length; i++) {
-				levels[i].map.SetActive(i == level);
-			}
-			SetBounds();
-			timer.StartTimer(levels[level].time);
-            Messenger.Default.Publish(new NewLevelEvent());
+	        StartCoroutine(LoadLevelEnumerator(level));
+        }
+
+        private IEnumerator LoadLevelEnumerator(int level)
+        {
+	        //fade in
+	        _videoActivator.PlayVideo();
+	        yield return StartCoroutine(FadeEnumerator(0,1,_fadeInTime));
+	        
+	        //load the actual level
+	        Level = level;
+	        for (int i = 0; i < levels.Length; i++) {
+		        levels[i].map.SetActive(i == level);
+	        }
+	        SetBounds();
+	        timer.StartTimer(levels[level].time);
+	        Messenger.Default.Publish(new NewLevelEvent());
+	        
+	        //fade out
+	        yield return StartCoroutine(FadeEnumerator(1,0,_fadeOutTime));
+        }
+
+        private IEnumerator FadeEnumerator(float from, float to, float time)
+        {
+	        var startTime = Time.time;
+	        var endTime = startTime + time;
+	        while (Time.time < endTime)
+	        {
+		        var t = 1 - (endTime - Time.time) / time;
+		        var color = _fadeImage.color;
+		        color.a = Mathf.Lerp(from, to, t);
+		        _fadeImage.color = color;
+		        yield return null;
+	        }
+	        var color2 = _fadeImage.color;
+	        color2.a = to;
+	        _fadeImage.color = color2;
         }
 
         private void OnEndLevel()
