@@ -1,6 +1,4 @@
-using System;
 using DG.Tweening;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -46,8 +44,11 @@ namespace MyFiles.Scripts
 
 		private void HideControls()
 		{
-			_controlsScreen.SetActive(false);
-		}
+			_controlsScreen.transform.DOScale(Vector3.zero, 0.3f).OnComplete(() => { 
+				_controlsScreen.SetActive(false);
+				_controlsScreen.transform.localScale = Vector3.one;
+			});
+        }
 		
 		private void ExitGame()
 		{
