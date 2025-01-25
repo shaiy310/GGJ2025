@@ -2,7 +2,7 @@ using MyFiles.Scripts.Events;
 using SuperMaxim.Messaging;
 using UnityEngine;
 
-public class TutorialAnimator : MonoBehaviour
+public class PushDownTutorialAnimator : MonoBehaviour
 {
     Animation anim;
 
