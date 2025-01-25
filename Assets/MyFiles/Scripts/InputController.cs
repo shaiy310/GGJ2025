@@ -16,5 +16,10 @@ namespace MyFiles.Scripts
 		{
             Messenger.Default.Publish(new PushDownEvent(context.ReadValueAsButton()));
         }
-	}
+
+        public void OnEscape(InputAction.CallbackContext context)
+        {
+			Messenger.Default.Publish(new EscapeEvent());
+        }
+    }
 }
