@@ -124,17 +124,31 @@ namespace MyFiles.Scripts
         private void OnEndLevel()
         {
             // check score
-			if (score >= levels[Level].scoreThreshold) {
-				_levelWinAudioEvent.Play();
-				if (Level + 1 < levels.Length) {
-					LoadLevel(Level + 1);
-				} else {
-					// end all levels
-					Debug.Log("finished all levels");
-				}
-            } else {
+			if (score >= levels[Level].scoreThreshold)
+			{
+				OnLevelWin();
+			} else {
 				LoadLevel(Level);
 			}
+        }
+
+        private void OnLevelWin()
+        {
+	        StartCoroutine(OnLevelWinEnumerator());
+        }
+
+        private IEnumerator OnLevelWinEnumerator()
+        {
+	        _levelWinAudioEvent.Play();
+
+	        yield return new WaitForSeconds(2);
+	        
+	        if (Level + 1 < levels.Length) {
+		        LoadLevel(Level + 1);
+	        } else {
+		        // end all levels
+		        Debug.Log("finished all levels");
+	        }
         }
 
         private void SetBounds()
