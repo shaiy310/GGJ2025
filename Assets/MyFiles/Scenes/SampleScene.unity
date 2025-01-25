@@ -314,6 +314,14 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 5.0653563
       objectReference: {fileID: 0}
+    - target: {fileID: 2905378812698479663, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_Size.x
+      value: 1.044914
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905378812698479663, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.027542949
+      objectReference: {fileID: 0}
     - target: {fileID: 3622875545488044669, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
       propertyPath: m_LocalScale.x
       value: 13.671156
@@ -3620,6 +3628,14 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 4.6865487
       objectReference: {fileID: 0}
+    - target: {fileID: 2905378812698479663, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_Size.x
+      value: 1.0707626
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905378812698479663, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.014618605
+      objectReference: {fileID: 0}
     - target: {fileID: 3622875545488044669, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
       propertyPath: m_LocalScale.x
       value: 8.662921
@@ -4544,10 +4560,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timer: {fileID: 1881141415}
   levels:
-  - Name: Test Level
-    time: 60
-    scoreThreshold: 10
-    map: {fileID: 1281525446}
   - Name: 0
     time: 60
     scoreThreshold: 10
@@ -5632,6 +5644,14 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 4.6865487
       objectReference: {fileID: 0}
+    - target: {fileID: 2905378812698479663, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_Size.x
+      value: 1.0918524
+      objectReference: {fileID: 0}
+    - target: {fileID: 2905378812698479663, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0040737092
+      objectReference: {fileID: 0}
     - target: {fileID: 3622875545488044669, guid: ecc8bbdb6e351fe4ea906812700e3b72, type: 3}
       propertyPath: m_LocalScale.x
       value: 8.662921
@@ -6315,7 +6335,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1281525447
 Transform:
   m_ObjectHideFlags: 0
@@ -9747,7 +9767,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!331 &1875639407
 SpriteMask:
   m_ObjectHideFlags: 0
