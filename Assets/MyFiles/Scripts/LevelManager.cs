@@ -77,8 +77,15 @@ namespace MyFiles.Scripts
         {
 	        //fade in
 	        _videoActivator.PlayVideo();
-	        yield return StartCoroutine(FadeEnumerator(0,1,_fadeInTime));
-	        
+	        if (level != 0)
+	        {
+		        yield return StartCoroutine(FadeEnumerator(0, 1, _fadeInTime));
+	        }
+	        else
+	        {
+		        yield return StartCoroutine(FadeEnumerator(1, 1, _fadeInTime));
+	        }
+
 	        //load the actual level
 	        Level = level;
 	        for (int i = 0; i < levels.Length; i++) {
