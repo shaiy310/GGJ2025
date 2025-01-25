@@ -86,7 +86,9 @@ namespace MyFiles.Scripts
         private IEnumerator LoadLevelEnumerator(int level)
         {
             //fade in
+#if !UNITY_WEBGL
             _videoActivator.PlayVideo();
+#endif
             _levelTransitionAudioEvent.Play();
             if (level == 0) {
                 yield return StartCoroutine(FadeEnumerator(1, 1, _fadeInTime));
